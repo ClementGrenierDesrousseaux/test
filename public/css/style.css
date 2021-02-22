@@ -1,41 +1,66 @@
 body {
-  background-color: aquamarine;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
-.bloc {
-  color: blue;
-}
-.bloc__element {
-  color: green;
-}
-
-.container {
+.load {
+  width: 100%;
+  height: 750px;
+  margin: auto;
   display: flex;
+  font-size: 5em;
+  justify-content: center;
+  align-items: center;
 }
-.container .bouton {
-  padding: 30px;
-  margin: 20px;
-  border: 1px solid black;
+.load__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: transparent;
+  background-clip: text;
+  animation: bars 1000ms backwards 3;
+  animation-direction: alternate;
 }
-.container .bouton--rempli {
-  background-color: green;
-  box-shadow: 0px 0px 10px 10px purple;
-  transform: scale(1);
-  transition: 200ms;
+.load__bar--1 {
+  animation-delay: 200ms;
 }
-.container .bouton--rempli:hover {
-  transform: scale(0.8);
+.load__bar--2 {
+  animation-delay: 400ms;
 }
-.container .bouton--vide {
-  border: 5px solid red;
-  box-shadow: 0px 0px 10px 10px #ce1111;
-  transform: scale(1);
-  transition: 200ms;
+.load__bar--3 {
+  animation-delay: 600ms;
 }
-.container .bouton--vide:hover {
-  transform: scale(1.2);
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--1 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--2 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--3 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--4 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+.load__bar--5 {
+  background-image: linear-gradient(to top, #9356dc 25%, #ff79da 75%);
+}
+
+@keyframes bars {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
